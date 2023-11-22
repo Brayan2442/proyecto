@@ -1,0 +1,95 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+    <link rel="stylesheet" href="../css/agenda/pull.css">
+
+    <link href="{%static 'css/candidato/encabezado/enca.css'%}" rel="stylesheet">
+    <link href="{%static 'css/candidato/encabezado/encabezado.css'%}" rel="stylesheet">
+    <link href="{%static 'css/candidato/agenda/agenda.css'%}" rel="stylesheet">
+    <link href="{%static 'css/candidato/perfil.css'%}" rel="stylesheet">
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="contenedor">
+        <header class="perfil">
+
+            <div class="flex1">
+                <div class="logoo">
+                    <img class="logo" src="{%static 'img/logo.png'%}" alt="logo.png">
+                </div>
+            </div>
+            
+            <div class="flex2">
+                <div class="foto">
+                    <img src="{%static 'img/foto.png'%}" alt="foto.png">
+                </div>
+            </div>
+
+            <div class="info">
+                <div class="nombre">Nombre:</div>
+                <div class="apellido">Apellido:</div>
+                <div class="correo">Correo:</div>
+                <div class="telefono">Telefono:</div>
+            </div>
+            
+            <div class="flex3">
+                <a href="">Privacidad</a>
+                <a href="">Términos</a>
+                <a href="">Ayuda</a>
+            </div>
+        </header>
+    
+        <aside class="encabezado">
+            
+            <div class="flex4">
+                <div class="navegacion">
+                    <a class="but" href="{%url 'home'%}">Inicio</a>
+                    <a class="butP" href="{%url 'agenda'%}">Agenda</a>
+                    <a class="but" href="{%url 'postulaciones'%}">Postulaciones</a>
+                    <a class="but" href="{%url 'notificaciones'%}">Notificaciones</a>
+                    <!-- <a class="but" href="{%url 'hoja_vida'%}">Hoja de vida</a> -->
+
+                </div>
+
+            </div>
+        </aside>
+
+
+        <div class="agenda">
+            <h1>Agenda de Entrevistas</h1>
+            <div class="entrevistas">
+                <div class="entrevista">
+                    <div class="fecha">Fecha: 2023-09-15</div>
+                    <div class="hora">Hora: 10:00 AM</div>
+                    <div class="descripcion">Descripción: Entrevista de trabajo</div>
+                </div>
+            </div>
+            <div class="nueva-entrevista">
+                <h2>Nueva Entrevista</h2>
+                <form>
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" required>
+                    <label for="hora">Hora:</label>
+                    <input type="time" id="hora" required>
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" rows="4" required></textarea>
+                    <button type="submit">Agregar Entrevista</button>
+                </form>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    
+
+</body>
+</html>
